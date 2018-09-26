@@ -10,36 +10,40 @@ public class PaymentInfo {
 	
 	private String holderName;
 
+	public PaymentInfo() {
+		
+	}
+	
 	public String getCreditCard() {
 		return creditCard;
 	}
 
-	public void setCreditCard(String creditCard) {
-		this.creditCard = creditCard;
+	public void setCreditCard(String newCreditCard) {
+		this.creditCard = newCreditCard;
 	}
 
 	public String getExpirationDate() {
 		return expirationDate;
 	}
 
-	public void setExpirationDate(String expirationDate) {
-		this.expirationDate = expirationDate;
+	public void setExpirationDate(String newExpirationDate) {
+		this.expirationDate = newExpirationDate;
 	}
 
 	public String getCvvCode() {
 		return cvvCode;
 	}
 
-	public void setCvvCode(String cvvCode) {
-		this.cvvCode = cvvCode;
+	public void setCvvCode(String newCvvCode) {
+		this.cvvCode = newCvvCode;
 	}
 
 	public String getHolderName() {
 		return holderName;
 	}
 
-	public void setHolderName(String holderName) {
-		this.holderName = holderName;
+	public void setHolderName(String newHolderName) {
+		this.holderName = newHolderName;
 	}
 	
 }

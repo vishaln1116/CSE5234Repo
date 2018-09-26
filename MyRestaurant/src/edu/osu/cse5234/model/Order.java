@@ -4,14 +4,18 @@ import java.util.ArrayList;
 
 public class Order {
 	
-	private ArrayList<Item> itemList = new ArrayList<Item>();
-
-	public ArrayList<Item> getItemList() {
-		return itemList;
+	private ArrayList<Item> items;
+	
+	public Order() {
+		items = new ArrayList<>();
+	}
+	
+	public ArrayList<Item> getItems() {
+		return items;
 	}
 
-	public void setItemList(ArrayList<Item> itemList) {
-		this.itemList = itemList;
+	public void setItems(ArrayList<Item> newItem) {
+		this.items = newItem;
 	}
 	
 }
