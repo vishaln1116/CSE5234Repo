@@ -20,6 +20,10 @@
 			</tr>
 		</c:forEach>
 		
+		<tr>
+			<td><c:out value="Total Price"></c:out></td>
+			<td><c:out value="$${order.totalPrice}"></c:out></td>
+		</tr>
 		
 		<tr>
 			<td><c:out value="Shipping: Name"></c:out></td>
