@@ -7,11 +7,30 @@
 <head>
 <meta charset="UTF-8">
 <title>View Order</title>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+table#t01 {
+    width: 100%;    
+    background-color:  #F2F2F0;
+}
+</style>
 </head>
 <body>
 
+<h2>Please confirm your order</h2>
+
 <form:form method="post" action="purchase/confirmOrder">
-    <table>
+    <table id="t01">
+    	<tr>
+    		<th colspan="3">Order Summary</th>
+  		</tr>
 		<c:forEach items="${order.items}" var="item" varStatus="loop">
 			<tr>
 				<td><c:out value="${item.name}"></c:out></td>
@@ -19,12 +38,16 @@
 				<td><c:out value="${item.quantity}"></c:out></td>
 			</tr>
 		</c:forEach>
-		
+	</table>
+	<b><c:out value="Total Price: "></c:out></b>
+	<b><c:out value="$${order.totalPrice}"></c:out></b>
+	
+	<br> </br>
+	
+	<table id="t01">
 		<tr>
-			<td><c:out value="Total Price"></c:out></td>
-			<td><c:out value="$${order.totalPrice}"></c:out></td>
-		</tr>
-		
+    		<th colspan="2">Shipment Address</th>
+  		</tr>
 		<tr>
 			<td><c:out value="Shipping: Name"></c:out></td>
 			<td><c:out value="${shipping.name}"></c:out></td>
@@ -49,8 +72,14 @@
 			<td><c:out value="Shipping: Zip"></c:out></td>
 			<td><c:out value="${shipping.zip}"></c:out></td>
 		</tr>
-		
-		
+	</table>
+	
+	<br> </br>
+	
+	<table id="t01">
+		<tr>
+    		<th colspan="2">Payment Information</th>
+  		</tr>
 		<tr>
 			<td><c:out value="Credit Card: Holder Name"></c:out></td>
 			<td><c:out value="${payment.holderName}"></c:out></td>
@@ -67,13 +96,9 @@
 			<td><c:out value="Credit Card: CVV Code"></c:out></td>
 			<td><c:out value="${payment.cvvCode}"></c:out></td>
 		</tr>
-		
-
-	  	<tr>
-			<td colspan="2"><input type="submit" value="Confirm Details"></td>
-		</tr>
-		
     </table>
+    <br> </br>
+    <td colspan="2"><input type="submit" value="Confirm Details"></td>
 </form:form>
 
 </body>

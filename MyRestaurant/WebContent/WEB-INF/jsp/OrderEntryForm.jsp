@@ -7,11 +7,32 @@
 <head>
 <meta charset="UTF-8">
 <title>Order Entry</title>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+table#t01 {
+    width: 100%;    
+    background-color:  #F2F2F0;
+}
+</style>
 </head>
 <body>
 
+<h2>Shopping Cart</h2>
+
 <form:form modelAttribute="order" method="post" action="purchase/submitItems">
-    <table>
+    <table id="t01">
+    	<tr>
+    		<th>Item name</th>
+    		<th>Price</th>
+    		<th>Quantity</th>
+  		</tr>
 		<c:forEach items="${order.items}" var="item" varStatus="loop">
 			<tr>
 				<td><c:out value="${item.name}"></c:out></td>
@@ -21,12 +42,9 @@
    				<form:hidden path="items[${loop.index}].price" value="${item.price}"/>
 			</tr>
 		</c:forEach>
-
-	  	<tr>
-			<td colspan="2"><input type="submit" value="Purchase"></td>
-		</tr>
-		
     </table>
+    <br> </br>
+    <td colspan="2"><input type="submit" value="Purchase"></td>
 </form:form>
 
 

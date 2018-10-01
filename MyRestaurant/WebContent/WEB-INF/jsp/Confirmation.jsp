@@ -7,13 +7,30 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+table#t01 {
+    width: 100%;    
+    background-color:  #F2F2F0;
+}
+</style>
 </head>
 <body>
 
 <h1>Order confirmed!</h1>
 <h3>Your order is on its way!</h3>
 
-<table>
+<table id="t01">
+	<tr>
+   		<th colspan="3">Order Summary</th>
+  	</tr>
 	<c:forEach items="${order.items}" var="item" varStatus="loop">
 		<tr>
 			<td><c:out value="${item.name}"></c:out></td>
@@ -22,11 +39,18 @@
 		</tr>
 	</c:forEach>
 	
-	<tr>
-		<td><c:out value="Total Price"></c:out></td>
-		<td><c:out value="$${order.totalPrice}"></c:out></td>
-	</tr>
+</table>
+<table id="t01">	
 	
+<b><c:out value="Total Price"></c:out></b>
+<b><c:out value="$${order.totalPrice}"></c:out></b>
+	
+</table>
+<br> </br>
+<table id="t01">	
+	<tr>
+   		<th colspan="2">Shipment Address</th>
+  	</tr>
 	<tr>
 		<td><c:out value="Shipping: Name"></c:out></td>
 		<td><c:out value="${shipping.name}"></c:out></td>
@@ -51,8 +75,12 @@
 		<td><c:out value="Shipping: Zip"></c:out></td>
 		<td><c:out value="${shipping.zip}"></c:out></td>
 	</tr>
-	
-	
+</table>
+<br> </br>
+<table id="t01">	
+	<tr>
+   		<th colspan="2">Payment Information</th>
+  	</tr>
 	<tr>
 		<td><c:out value="Credit Card: Holder Name"></c:out></td>
 		<td><c:out value="${payment.holderName}"></c:out></td>
