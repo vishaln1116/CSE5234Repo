@@ -7,7 +7,7 @@
 <div>
   <div>
     <h1>Vishal Nallanagulagari</h1>
-    <p>About Vishal</p>
+    <p>Hello! I am a fourth-year studying CSE at Ohio State! I'm a big baller.</p>
   </div>
   
   <div>
