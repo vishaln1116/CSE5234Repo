@@ -4,12 +4,10 @@
 
 <h2>Questions? Contact Us!</h2>
 
-<section>
-  <article>
-    <h1>Contact Information</h1>
-    <p>Phone Number: </p>
-    <p>Email Address: </p>
-  </article>
-  
+<div>
+   <h1>Contact Information</h1>
+   <p>Phone Number: </p>
+   <p>Email Address: </p>
+</div> 
 
 <%@ include file = "Footer.jsp" %>

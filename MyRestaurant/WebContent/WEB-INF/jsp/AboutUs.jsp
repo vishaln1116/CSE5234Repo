@@ -4,21 +4,21 @@
 
 <h2>A little about the owners!</h2>
 
-<section>
-  <article>
+<div>
+  <div>
     <h1>Vishal Nallanagulagari</h1>
     <p>About Vishal</p>
-  </article>
+  </div>
   
-    <article>
+  <div>
     <h1>Michael</h1>
     <p>About Michael</p>
-  </article>
+  </div>
   
-   <article>
+  <div>
     <h1>Hanfei</h1>
     <p>About Hanfei</p>
-  </article>
-</section>
+  </div>
+</div>
 
 <%@ include file = "Footer.jsp" %>
