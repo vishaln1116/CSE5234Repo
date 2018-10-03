@@ -13,10 +13,10 @@
 <h2 id="slogan">Delivery while it's still warm...</h2>
 <div>
 	<p>
-		<a href="/">Home</a> | 
-		<a href="/purchase">Purchase</a> | 
-		<a href="/aboutUs">About us</a> | 
-		<a href="/contactUs">Contact Us</a>	
+		<a href="/MyRestaurant/">Home</a> | 
+		<a href="/MyRestaurant/purchase">Purchase</a> | 
+		<a href="/MyRestaurant/aboutUs">About us</a> | 
+		<a href="/MyRestaurant/contactUs">Contact Us</a>	
 	</p>
 </div>
 
