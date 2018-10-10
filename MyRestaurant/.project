@@ -3,6 +3,7 @@
 	<name>MyRestaurant</name>
 	<comment></comment>
 	<projects>
+		<project>MyRestaurant-InventoryManagement-EJBClient</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

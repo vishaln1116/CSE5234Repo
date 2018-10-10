@@ -5,6 +5,9 @@
 <h1>Order confirmed!</h1>
 <h3>Your order is on its way!</h3>
 
+Your order number is <%= request.getSession().getAttribute("confirmationCode") %>
+
+
 <table id="t01">
 	<tr>
    		<th colspan="3">Order Summary</th>

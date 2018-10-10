@@ -1,10 +1,13 @@
 package edu.osu.cse5234.model;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import edu.osu.cse5234.business.view.Item;
 
 public class Order {
 
-    private ArrayList<Item> items;
+    private List<Item> items;
 
     private String totalPrice;
 
@@ -13,11 +16,11 @@ public class Order {
         this.totalPrice = "0.00";
     }
 
-    public ArrayList<Item> getItems() {
+    public List<Item> getItems() {
         return this.items;
     }
 
-    public void setItems(ArrayList<Item> newItem) {
+    public void setItems(List<Item> newItem) {
         this.items = newItem;
     }
 

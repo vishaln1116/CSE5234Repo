@@ -4,6 +4,10 @@
 
 <h2>Shopping Cart</h2>
 
+<c:if test = "${isInvalidOrder}">
+	<div><p>Invalid order, please resubmit your order.</p></div>		
+</c:if>
+
 <form:form modelAttribute="order" method="post" action="purchase/submitItems">
     <table id="t01">
     	<tr>
